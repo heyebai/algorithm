@@ -35,7 +35,7 @@ var search = function (nums, target) {
 
 var search = function (nums, target) {
     let l = 0,
-        r = nums.length;
+        r = nums.length - 1;
 
     while (l <= r) {
         const mid = Math.floor((l + r) / 2);
