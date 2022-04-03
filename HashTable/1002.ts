@@ -20,7 +20,7 @@ function commonChars(words: string[]): string[] {
   return result;
 }
 
-function commonChars(words: string[]): string[] {
+function commonChars1(words: string[]): string[] {
   if (words.length < 1) {
     return [];
   }
