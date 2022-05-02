@@ -19,3 +19,23 @@ function preorderTraversal(root: TreeNode | null): number[] {
   }
   return result;
 }
+
+// loop
+function preorderTraversal1(root: TreeNode | null): number[] {
+  if (!root) {
+    return [];
+  }
+  const stack: TreeNode[] = [root];
+  const result: number[] = [];
+  while (stack.length) {
+    const node: TreeNode = stack.pop();
+    result.push(node.val);
+    if (node.right) {
+      stack.push(node.right);
+    }
+    if (node.left) {
+      stack.push(node.left);
+    }
+  }
+  return result;
+}

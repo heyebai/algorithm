@@ -13,3 +13,23 @@ function postorderTraversal(root: TreeNode | null): number[] {
   helper(root, result);
   return result;
 }
+
+// loop
+function postorderTraversal1(root: TreeNode | null): number[] {
+  if (!root) {
+    return [];
+  }
+  const stack: TreeNode[] = [root];
+  const result: number[] = [];
+  while (stack.length) {
+    const node: TreeNode = stack.pop();
+    result.push(node.val);
+    if (node.left) {
+      stack.push(node.left);
+    }
+    if (node.right) {
+      stack.push(node.right);
+    }
+  }
+  return result.reverse();
+}
