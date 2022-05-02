@@ -1,14 +1,12 @@
 class TreeNode {
   public val: number;
-  public leftNode: TreeNode | null;
-  public rightNode: TreeNode | null;
-  constructor(
-    val?: number,
-    leftNode?: TreeNode | null,
-    rightNode?: TreeNode | null
-  ) {
+  public left: TreeNode | null;
+  public right: TreeNode | null;
+  constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
     this.val = val === undefined ? 0 : val;
-    this.leftNode = leftNode === undefined ? null : leftNode;
-    this.rightNode = rightNode === undefined ? null : rightNode;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
   }
 }
+
+export default TreeNode;
