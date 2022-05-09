@@ -22,3 +22,5 @@ function mergeTrees(
   }
   return node;
 }
+
+// can merge to root1 directly
