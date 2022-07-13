@@ -1,11 +1,3 @@
-let store = [1, 2, 7, 4, 5, 6];
-
-store = store.slice(0, 1).concat(store.slice(1 + 1));
-
-const a = { 2: 3 };
-console.log(a[3]);
-console.log(store.sort((a, b) => (a - b > 0 ? 1 : -1)));
-
 function repeatedSubstringPattern(s: string): boolean {
   const goNext = (t: string): number[] => {
     const next: number[] = new Array(t.length).fill(0);
@@ -21,9 +13,12 @@ function repeatedSubstringPattern(s: string): boolean {
     }
     return next;
   };
+  if (s.length < 2) return false;
   const next = goNext(s);
-  console.log(next);
+  if (
+    s.length % (s.length - next[s.length - 1]) === 0 &&
+    next[s.length - 1] !== 0
+  )
+    return true;
   return false;
 }
-
-repeatedSubstringPattern("abaababaababaab");
