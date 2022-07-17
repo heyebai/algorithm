@@ -8,3 +8,5 @@ console.log(store.sort((a, b) => (a - b > 0 ? 1 : -1)));
 
 console.log("abc".charCodeAt(1));
 console.log(String.fromCharCode(97));
+
+console.log("abc".toUpperCase());
