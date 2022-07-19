@@ -10,3 +10,7 @@ console.log("abc".charCodeAt(1));
 console.log(String.fromCharCode(97));
 
 console.log("abc".toUpperCase());
+if (typeof parseInt("e")) {
+  console.log(1);
+}
+console.log(typeof parseInt("e"));
