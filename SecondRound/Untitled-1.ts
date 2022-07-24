@@ -13,9 +13,9 @@ console.log("abc".toUpperCase());
 if (typeof parseInt("e")) {
   console.log(1);
 }
-
 const candies: number[] = new Array(3);
 candies[3] = 1;
 
 console.log(candies[0]);
 console.log(typeof parseInt("e"));
+console.log(Math.pow(16, 0.5));
