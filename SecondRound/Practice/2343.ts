@@ -12,27 +12,7 @@ function smallestTrimmedNumbers(nums: string[], queries: number[][]): number[] {
   const res: number[] = [];
   for (const q of queries) {
     const temp = helper(nums, q[1]);
-    console.log(temp);
     res.push(temp[q[0] - 1][1]);
   }
   return res;
 }
-
-const a = smallestTrimmedNumbers(
-  [
-    "22222222222222222222222222222222222222222222222225",
-    "22222222222222222222222222222222222222222222222221",
-    "22222222222222222222222222222222222222222222222223",
-    "22222222222222222222222222222222222222222222222228",
-    "22222222222222222222222222222222222222222222222226",
-  ],
-  [
-    [1, 40],
-    [3, 40],
-    [2, 40],
-    [5, 40],
-    [4, 40],
-  ]
-);
-
-a;
