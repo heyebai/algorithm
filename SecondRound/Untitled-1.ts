@@ -36,3 +36,10 @@ const a = smallestTrimmedNumbers(
 );
 
 a;
+
+const testType: number[] = [];
+testType.push(222);
+testType.push(222);
+testType.push("abc");
+
+testType;
