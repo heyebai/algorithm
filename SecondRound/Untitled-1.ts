@@ -43,3 +43,24 @@ testType.push(222);
 testType.push("abc");
 
 testType;
+
+console.log(String.fromCharCode(97));
+console.log(11 / 10);
+const map = new Map();
+map.set(1, 2);
+map.set(2, 2);
+map.set(3, 2);
+map.set(4, 2);
+map.delete(3);
+const maptoarr = Array.from(map);
+maptoarr;
+const set = new Set();
+set.add(1);
+set.add(2);
+set.add(3);
+set.add(4);
+set.delete(3);
+const settoarr = Array.from(set);
+
+settoarr;
+console.log(set.size, map.size);
