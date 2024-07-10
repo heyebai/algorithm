@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div id="div">id</div>
+    <input id="check" type="checkbox" onclick="onCheckClick('hyb')"/>
+</body>
+<script>
+    const box = document.getElementById('div');
+    window.addEventListener('popstate', () => {
+        console.log('Clicked browser back button');
+        box.style.backgroundColor = 'white';
+      });
+     
+     
+     box.addEventListener('click', () => {
+      box.style.backgroundColor = 'blue';
+      window.history.pushState({}, null, null);
+     });
+
+    console.log('logggggg');
+    const divs =document.getElementsByTagName('div')
+    console.log('divs::::::',divs);
+    const divId = document.getElementById('div')
+    console.log('divId:::', divId);
+    const onCheckClick=(param)=>{
+        console.log('param::', param);
+        const check = document.getElementById('check').checked
+        console.log('check:::', check);
+    }
+
+    const parent = document.querySelector("div");
+    console.log('parent::', parent);
+  const child = document.querySelector(".child");
+  console.log('child::', child);
+</script>
+</html>
